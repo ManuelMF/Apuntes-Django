@@ -1,0 +1,13 @@
+package Controlador;
+
+import Modelo.Playlist;
+
+public class MenuMiPlaylist {
+	Vista.menuPlaylist VentanaPalylist;
+	
+	public MenuMiPlaylist(Playlist playlsit) {
+		VentanaPalylist = new Vista.menuPlaylist();
+	}
+}
+
+}

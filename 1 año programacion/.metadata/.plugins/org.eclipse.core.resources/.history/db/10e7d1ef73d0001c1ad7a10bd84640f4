@@ -1,0 +1,7 @@
+package Frame;
+
+import java.awt.Frame;
+
+public class FramePrincipal extends Frame {
+	super();
+}
