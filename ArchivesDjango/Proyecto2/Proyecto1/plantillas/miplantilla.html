@@ -1,0 +1,35 @@
+<html>
+    <body>
+        <h1 style="color: red">
+            Hola, primera pagina con Django
+        </h1>
+
+        <!-- importar plantilla -->
+        {% include "superior/barra.html" %}
+
+        {% comment %} NO TEMAS DISEÑADOR
+            IGNORA ESTA PARTE
+        {% endcomment %}
+
+        {% if nombre_persona == "Profesor Juan" %}
+        <p> El curso lo imparte el profesor titular</p>
+        {% else %}
+        <p>El curso lo imparte el profesor suplente</p>
+        {% endif %}
+
+        <p>Mi nombre es: {{nombre_persona.upper}} {{apellido_persona.upper}}</p>
+        <p>Fecha y hora actual: {{Fecha.day}} / {{Fecha.month}} / {{Fecha.year}} {{Fecha.time}}</p>
+        <p><strong>Temarios:</strong></p>
+        <p> 
+            <ul>   <!-- mira si existe temas y si tiene info-->
+            {% if lista_temas %}    
+                {% for elTema in lista_temas %}
+                    <li>{{elTema}}</li>
+                {% endfor %}
+            {% else %} 
+                <p>No hay elementos que mostrar</p>
+            {% endif %}
+            </ul>
+        </p>
+    </body>
+</html>
